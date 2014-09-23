@@ -18,7 +18,8 @@ fprintf('\n');
 % the Matlab function 'now' returns the current time in Matlab serial 
 % time which has units of days. To convert to seconds, you must therefore
 % multiple by 24 hours/day * 3600 seconds/hour = 86400 seconds / day
-% save the current time
+
+% Save the current time
 time0 = now;
 
 % To convert Matlab serial time to a readable format you can use the datestr function
