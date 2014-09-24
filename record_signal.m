@@ -43,7 +43,7 @@ while ((now-time0)*24*3600) < ??
     timeV = now;
 
     % update data vector using array concatenation
-    data = [data ??];
+    dataADC = [dataADC ??];
     
     % update etime vector using array concatenation
     etime = [etime (timeV-time0)*24*3600];
@@ -64,27 +64,6 @@ ylabel('Raw ADC units');
 title('Spirometry signal'); 
 
 
-%% Part 3a
-% convert your data to units of volts by multiplying by the appropriate
-% scale factor. Hint: ADC
-dataVolts = dataADC;
-
-% plot the results
-figure(2);clf;
-plot(etime, dataVolts);
-xlabel('Time (sec)');
-ylabel('Spirometry signal (V)');
-axis([0 seconds_to_record 0 5]);
-
-%% Part 3b
-% convert dataVolts to air flow rate
-data_airFlow_rate = dataVolts;
-
-figure(3);clf;
-plot(etime, data_airFlow_rate);
-xlabel('Time (sec)');
-ylabel('Air flow rate (L/s)');
-axis([0 seconds_to_record -17 17]);
 
 
 
