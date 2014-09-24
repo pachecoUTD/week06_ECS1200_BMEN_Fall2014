@@ -59,6 +59,9 @@ while ((now-time0)*24*3600) < ??
     % pause for fixed time
     pause(pause_time);
 end
+xlabel('Time (sec)');
+ylabel('Raw ADC units');
+title('Spirometry signal'); 
 
 
 %% Part 3a
@@ -70,7 +73,7 @@ dataVolts = dataADC;
 figure(2);clf;
 plot(etime, dataVolts);
 xlabel('Time (sec)');
-ylabel('Spirometetry signal (V)');
+ylabel('Spirometry signal (V)');
 axis([0 seconds_to_record 0 5]);
 
 %% Part 3b
